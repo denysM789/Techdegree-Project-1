@@ -38,6 +38,9 @@ const quotes = [
 
 /***
  * `getRandomQuote` function
+ * 
+ * returns a random number based on the amount of quotes in the quotes array.
+ * returns only rounded integers
 ***/
 function getRandomQuote() {
   var randomQuote = quotes[ Math.floor( Math.random() * quotes.length ) ];
@@ -47,6 +50,9 @@ function getRandomQuote() {
 
 /***
  * `printQuote` function
+ * 
+ * calls the getRandomQuote function and returns a random quote out of it. 
+ * returns the random quote and the source in HTML.
 ***/
 function printQuote() {
   const callGetRandomQuote = getRandomQuote(quotes);
@@ -56,6 +62,9 @@ function printQuote() {
   `;
   }
   
+  /*** checks if there is a citation given to the quote. 
+   * if yes, it returns the citation in HTML.
+   ***/
 
   if ( callGetRandomQuote.citation !== undefined ) {
     html += `
@@ -63,11 +72,18 @@ function printQuote() {
     `;
   }
 
+
+  /*** checks if there is a date given to the quote. 
+   * if yes, it returns the date in HTML.
+   ***/
+
   if ( callGetRandomQuote.date !== undefined) {
     html += `
     <span class='year'> ${callGetRandomQuote.date} </span>
     `;
   }
+
+  
 
     html += `</p>`;
 
