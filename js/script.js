@@ -54,9 +54,10 @@ function printQuote() {
   <p class="quote">${callGetRandomQuote.quote} </p>
   <p class="source"> ${callGetRandomQuote.source}
   `;
+  }
   
 
-  if ( callGetRandomQuote.citation !== undefined) {
+  if ( callGetRandomQuote.citation !== undefined ) {
     html += `
     <span class='citation' ${callGetRandomQuote.citation} </span>
     `;
@@ -66,7 +67,7 @@ function printQuote() {
     html += `
     <span class='year'> ${callGetRandomQuote.date} </span>
     `;
-}
+  }
 
     html += `</p>`;
 
