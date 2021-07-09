@@ -60,7 +60,7 @@ function printQuote() {
   <p class="quote">${callGetRandomQuote.quote} </p>
   <p class="source"> ${callGetRandomQuote.source}
   `;
-  }
+  
   
   /*** checks if there is a citation given to the quote. 
    * if yes, it returns the citation in HTML.
@@ -89,7 +89,7 @@ function printQuote() {
 
     document.getElementById('quote-box').innerHTML = html; 
     
-
+};
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
