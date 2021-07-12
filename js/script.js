@@ -21,7 +21,8 @@ const quotes = [
   },
   {
     quote: "Ask yourself: Have you been kind today? Make kindness your daily modus operandi and change your world.", 
-    source: "Annie Lennox", 
+    source: "Annie Lennox,", 
+    citation: "The Book of Annie Lennox,",
   },
   {
     quote: "Anything that has real and lasting value is always a gift from within", 
@@ -29,8 +30,8 @@ const quotes = [
   },
   {
     quote: "In the highest civilization, the book is still the highest delight. He who has once known its satisfactions is provided with a resource against calamity.", 
-    source: "Ralph Waldo Emerson", 
-    citation: "His book",
+    source: "Ralph Waldo Emerson,", 
+    citation: "His book Life & Death and Beyond,",
     date: "1938",
   }
 ]; 
@@ -68,7 +69,7 @@ function printQuote() {
 
   if ( callGetRandomQuote.citation !== undefined ) {
     html += `
-    <span class='citation' ${callGetRandomQuote.citation} </span>
+    <span class> ${callGetRandomQuote.citation}  </span>
     `;
   }
 
@@ -79,7 +80,7 @@ function printQuote() {
 
   if ( callGetRandomQuote.date !== undefined) {
     html += `
-    <span class='year'> ${callGetRandomQuote.date} </span>
+    <span class> ${callGetRandomQuote.date} </span>
     `;
   }
 
