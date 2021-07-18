@@ -69,7 +69,7 @@ function printQuote() {
 
   if ( callGetRandomQuote.citation !== undefined ) {
     html += `
-    <span class> ${callGetRandomQuote.citation}  </span>
+    <span class="citation"> ${callGetRandomQuote.citation}  </span>
     `;
   }
 
@@ -80,7 +80,7 @@ function printQuote() {
 
   if ( callGetRandomQuote.date !== undefined) {
     html += `
-    <span class> ${callGetRandomQuote.date} </span>
+    <span class="year"> ${callGetRandomQuote.date} </span>
     `;
   }
 
